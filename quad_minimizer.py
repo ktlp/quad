@@ -12,7 +12,7 @@ import torch
 # sample generator
 # f(x) = ax^2 + bx + c
 # min @ -b/2a
-
+tt = 2
 def gen(vector):
     assert isinstance(vector,np.ndarray), 'Not correct type'
     return 2*np.power(vector,2) + 2*vector + 1
