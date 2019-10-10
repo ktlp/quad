@@ -76,6 +76,7 @@ net = Net(6,50,50,1)
 optimizer = torch.optim.SGD(net.parameters(), lr = 0.2)
 loss_func = torch.nn.MSELoss()
 n_epochs = 1000
+aa = '11'
 
 # training
 for epoch in range(n_epochs):
