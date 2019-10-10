@@ -9,10 +9,11 @@ import matplotlib.pyplot as plt
 import imageio
 import torch
 
-# sample generator
-# f(x) = ax^2 + bx + c
-# min @ -b/2a
-tt = 2
+'''
+This is an effort to train simple NN to find the minimum of a polyonimal of 2nd order,
+i.e. ax^2 + bx + c = 0 --> -b/(2a)
+'''
+
 def gen(vector):
     assert isinstance(vector,np.ndarray), 'Not correct type'
     return 2*np.power(vector,2) + 2*vector + 1
@@ -76,7 +77,7 @@ net = Net(6,50,50,1)
 optimizer = torch.optim.SGD(net.parameters(), lr = 0.2)
 loss_func = torch.nn.MSELoss()
 n_epochs = 1000
-aa = '11'
+
 
 # training
 for epoch in range(n_epochs):
